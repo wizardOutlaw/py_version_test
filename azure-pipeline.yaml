@@ -1,0 +1,21 @@
+trigger:
+  - master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  - group: Github
+  
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: seequent/az_pipelines_templates
+      ref: CEN-2146-Handle_Versions_in_Central_Builds
+      endpoint: seequent
+
+steps:
+  - template: common/set_version_suffix_var.yaml@templates
+    parameters:
+      increaseType: $(dev)
