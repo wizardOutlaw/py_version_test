@@ -17,13 +17,13 @@ resources:
 
 steps:
   - template: common/set_version_suffix_var.yaml@templates
-    parameters:
-      VAR_STRING: $(dev)
-
+    
   - task: PipAuthenticate@0
     inputs: 
       artifactFeed: 'seequent_libraries'
     displayName: "Python PIP Authenticate"
+    parameters:
+      VAR_STRING: $(dev)
   
   - script: |
       py -m pip install --upgrade pip
