@@ -20,7 +20,7 @@ steps:
     parameters:
       increaseType: $(dev)
 
-- task: PipAuthenticate@1
+- task: PipAuthenticate@0
   inputs: 
     artifactFeed: 'seequent_libraries'
   displayName: "Python PIP Authenticate"
