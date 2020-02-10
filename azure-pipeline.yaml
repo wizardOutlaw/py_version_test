@@ -19,7 +19,7 @@ resources:
 steps:
   - template: common/set_version_suffix_var.yaml@templates
     parameters:
-      increaseType: $(dev)
+      VAR_STRING: $(dev)
 
   - task: PipAuthenticate@0
     inputs: 
