@@ -1,5 +1,5 @@
 trigger:
-  - master  
+  - '*'  
 
 pool:
   vmImage: "ubuntu-latest"
@@ -22,7 +22,7 @@ steps:
     
   - task: PipAuthenticate@1
     inputs: 
-      artifactFeed: 'seequent_libraries'
+      artifactFeeds: 'seequent_libraries'
     displayName: "Python PIP Authenticate"
       
   - script: |
