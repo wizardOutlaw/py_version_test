@@ -26,4 +26,4 @@ steps:
     displayName: "Python PIP Authenticate"
       
   - script: |
-      py -m pip install --upgrade pip      
+      py -m pip install --upgrade pip
