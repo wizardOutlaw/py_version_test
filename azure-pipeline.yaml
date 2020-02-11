@@ -27,4 +27,4 @@ steps:
       
   - script: |
       echo "This is a test"
-      py -m pip install --upgrade pip
+      echo "Publishing this in seequent libraries"
