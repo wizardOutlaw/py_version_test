@@ -19,7 +19,7 @@ steps:
   - template: common/set_version_suffix_var.yaml@templates
     parameters:
       buildType: dev
-      customCounter: 100
+      customCounter: "Randomnumber"
       
   - task: PipAuthenticate@1
     inputs: 
