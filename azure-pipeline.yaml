@@ -1,5 +1,5 @@
 trigger:
-  - master  
+  - '*'  
 
 pool:
   vmImage: "ubuntu-latest"
@@ -19,11 +19,12 @@ steps:
   - template: common/set_version_suffix_var.yaml@templates
     parameters:
       buildType: dev
-    
+      customCounter: 100
+      
   - task: PipAuthenticate@1
     inputs: 
       artifactFeed: 'seequent_libraries'
     displayName: "Python PIP Authenticate"
       
   - script: |
-      py -m pip install --upgrade pip
+      echo "Testing variables"
