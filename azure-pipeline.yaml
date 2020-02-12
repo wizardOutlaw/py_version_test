@@ -18,7 +18,8 @@ resources:
 steps:
   - template: common/set_version_suffix_var.yaml@templates
     parameters:
-      buildType: dev      
+      buildType: dev
+      UserDefined: 10random20
       
   - task: PipAuthenticate@1
     inputs: 
